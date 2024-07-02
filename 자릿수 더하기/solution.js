@@ -1,10 +1,10 @@
 function solution(n)
 {
-    var answer = 0;
-    var m = String(n);
-    
-    for ( let i = 0; i < m.length; i++) {
-        answer += parseInt(m[i]);
-    }
-    return answer;
+    const arr = n.toString().split('');
+    console.log("arr", arr);
+    return arr.reduce(
+        (acc,cur) =>
+            acc+ Number(cur),
+             0 );
 }
+console.log(solution([1234]));
